@@ -1,0 +1,18 @@
+PODS:
+  - Nimble (7.0.3)
+  - Nuke (5.2)
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - Nimble
+  - Nuke (~> 5.2.0)
+  - Quick (= 1.2.0)
+
+SPEC CHECKSUMS:
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Nuke: 5f420c4637415f979c83afb35e73176dd03232d9
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: 7682dac3108e1d9310bc90d3c6b86aa0f131dd4c
+
+COCOAPODS: 1.4.0
