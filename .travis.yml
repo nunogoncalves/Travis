@@ -8,6 +8,7 @@ osx_image: xcode9.3beta
 
 script:
   # - xcodebuild -scheme OctoPodium -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' build test
-  - xcodebuild -workspace Travis.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -scheme Travis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build test | xcpretty -c
+  # - xcodebuild -workspace Travis.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -scheme Travis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build test | xcpretty -c
+  - xcodebuild -workspace Travis.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -scheme Travis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -derivedDataPath build -enableCodeCoverage YES GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES build test | xcpretty -c
 after_success:
   - bash <(curl -s https://codecov.io/bash)
